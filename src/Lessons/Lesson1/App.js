@@ -21,8 +21,8 @@ function App() {
         <div className="highlight-overlay"></div>
       </div>
       <div className="window">
-        {/* <ShopItemFunc item={item} /> */}
-        <ShopItemClass item={item} />
+        <ShopItemFunc item={item} />
+        {/* <ShopItemClass item={item} /> */}
       </div>
     </div>
   );

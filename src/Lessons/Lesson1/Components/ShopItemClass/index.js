@@ -1,9 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class ShopItemClass extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const {
       brand,
@@ -35,3 +33,14 @@ class ShopItemClass extends React.Component {
 }
 
 export default ShopItemClass;
+
+ShopItemClass.propTypes = {
+  optionalObjectWithShape: PropTypes.shape({
+    brand: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    descriptionFull: PropTypes.string,
+    price: PropTypes.number,
+    currency: PropTypes.string
+  })
+}

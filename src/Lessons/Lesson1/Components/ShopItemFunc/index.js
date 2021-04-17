@@ -1,12 +1,7 @@
-const ShopItemFunc = (props) => {
-  const {
-    brand,
-    title,
-    description,
-    descriptionFull,
-    price,
-    currency,
-  } = props.item;
+import PropTypes from 'prop-types';
+
+const ShopItemFunc = ({item}) => {
+  const {brand, title, description, descriptionFull, price, currency} = item
   return (
     <div className="main-content">
       <h2>{brand}</h2>
@@ -26,5 +21,16 @@ const ShopItemFunc = (props) => {
     </div>
   );
 };
+
+ShopItemFunc.propTypes = {
+  optionalObjectWithShape: PropTypes.shape({
+    brand: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    descriptionFull: PropTypes.string,
+    price: PropTypes.number,
+    currency: PropTypes.string
+  })
+}
 
 export default ShopItemFunc;
