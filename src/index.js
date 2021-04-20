@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import AppLessonOne from './Lessons/Lesson1/App';
+// import AppLessonOne from './Lessons/Lesson1/App';
+import AppLessonTwo from './Lessons/Lesson2/App';
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppLessonOne />
+    <AppLessonTwo />
   </React.StrictMode>,
   document.getElementById('root')
 );

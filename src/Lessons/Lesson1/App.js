@@ -22,7 +22,7 @@ function App() {
       </div>
       <div className="window">
         <ShopItemFunc item={item} />
-        {/* <ShopItemClass item={item} /> */}
+        <ShopItemClass item={item} />
       </div>
     </div>
   );
