@@ -1,9 +1,11 @@
 import Portfolio from './Filter/Components/Portfolio';
+import Store from './Layouts/Components/Store';
 
 const App = () => {
   return (
     <>
-      <Portfolio />
+      {/* <Portfolio /> */}
+      <Store />
     </>
   );
 };
