@@ -1,9 +1,11 @@
-import ConverterHexToRgb from './Hex2Rgb/Components/ConverterHexToRgb';
+// import ConverterHexToRgb from './Hex2Rgb/Components/ConverterHexToRgb';
+import StepsContainer from './Steps/Components/StepsContainer';
 
 const App = () => {
   return (
     <>
-      <ConverterHexToRgb />
+      {/* <ConverterHexToRgb /> */}
+      <StepsContainer />
     </>
   );
 };
