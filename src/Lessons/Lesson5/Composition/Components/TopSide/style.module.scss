@@ -1,0 +1,26 @@
+.container {
+  display: grid;
+  justify-content: stretch;
+  grid-auto-flow: row;
+  gap: 10px;
+
+  .controlContainer {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 10px;
+  }
+
+  .newsContainer {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 7px;
+  }
+
+  .quotesContainer {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 15px;
+  }
+}
