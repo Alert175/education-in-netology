@@ -1,0 +1,19 @@
+.containerElement {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+
+  .newsImage {
+    object-fit: contain;
+    height: 20px;
+    width: 20px;
+  }
+
+  .newsText {
+    font-size: 16px;
+    color: black;
+  }
+}
