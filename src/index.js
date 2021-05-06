@@ -6,13 +6,14 @@ import './index.css';
 // import AppLessonTwo from './Lessons/Lesson2/App';
 // import AppLessonThree from './Lessons/Lesson3/App';
 // import AppLessonFour from './Lessons/Lesson4/App';
-import AppLessonFive from './Lessons/Lesson5/App';
+// import AppLessonFive from './Lessons/Lesson5/App';
+import AppLessonSix from './Lessons/Lesson6/App';
 
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppLessonFive />
+    <AppLessonSix />
   </React.StrictMode>,
   document.getElementById('root')
 );
