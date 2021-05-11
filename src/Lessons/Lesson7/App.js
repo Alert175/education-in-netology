@@ -1,9 +1,11 @@
-import Time from './Time/Components/Container';
+// import Time from './Time/Components/Container';
+import Highlight from './Highlight/Components/Container';
 
 const App = () => {
   return (
     <>
-      <Time />
+      {/* <Time /> */}
+      <Highlight />
     </>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../styles/main.css';
 
+// computed date
 const computedAfterDate = (date) => {
   const pastDate = new Date(date.split(' ').join('T')).getTime();
   const currentDate = new Date().getTime();
