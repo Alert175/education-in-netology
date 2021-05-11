@@ -7,13 +7,14 @@ import './index.css';
 // import AppLessonThree from './Lessons/Lesson3/App';
 // import AppLessonFour from './Lessons/Lesson4/App';
 // import AppLessonFive from './Lessons/Lesson5/App';
-import AppLessonSix from './Lessons/Lesson6/App';
+// import AppLessonSix from './Lessons/Lesson6/App';
+import AppLessonSeven from './Lessons/Lesson7/App';
 
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppLessonSix />
+    <AppLessonSeven />
   </React.StrictMode>,
   document.getElementById('root')
 );
