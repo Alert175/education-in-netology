@@ -1,0 +1,57 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    'input_element button_element'
+    'text_element .';
+  grid-template-columns: 1fr auto;
+  grid-row-gap: 10px;
+  position: relative;
+
+  .searchInput {
+    grid-area: input_element;
+    height: 40px;
+    border: 4px solid #fc0;
+    padding-left: 10px;
+    font-size: 16px;
+    border-radius: 10px 6px 6px 10px;
+    outline: 0;
+  }
+
+  .searchButton {
+    grid-area: button_element;
+    display: block;
+    border: none;
+    background-color: #fc0;
+    border-radius: 0 10px 10px 0;
+    position: relative;
+    left: -10px;
+    padding: 0 25px;
+    font-size: 16px;
+  }
+
+  .exampleText {
+    grid-area: text_element;
+    font-size: 16px;
+    color: black;
+
+    .exampleLink {
+      text-decoration: none;
+      color: gray;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: auto;
+    left: -120px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+
+    .firstSymbold {
+      color: #fc3f1d;
+    }
+  }
+}
