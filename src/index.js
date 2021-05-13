@@ -8,13 +8,14 @@ import './index.css';
 // import AppLessonFour from './Lessons/Lesson4/App';
 // import AppLessonFive from './Lessons/Lesson5/App';
 // import AppLessonSix from './Lessons/Lesson6/App';
-import AppLessonSeven from './Lessons/Lesson7/App';
+// import AppLessonSeven from './Lessons/Lesson7/App';
+import AppLessonEight from './Lessons/Lesson8/App';
 
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppLessonSeven />
+    <AppLessonEight />
   </React.StrictMode>,
   document.getElementById('root')
 );
