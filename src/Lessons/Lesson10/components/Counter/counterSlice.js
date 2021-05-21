@@ -24,8 +24,21 @@ export const slice = createSlice({
   },
 });
 
-// экспорт экшенов (методов управления состоянием среза ГХ)
+// экспорт экшенов (методов управления состоянием среза ГХ
 export const { increment, incrementByAmount } = slice.actions;
+
+// создание асинхронной функции создателя действия преобразователя, для упраления состоянием среза ГХ
+export const incrementAsync = (amount) => (dispatch) => {
+  setTimeout(() => {
+    dispatch(incrementByAmount(amount));
+  }, 1000);
+};
+
+export const incrementAsyncNotAmount = () => (dispatch) => {
+  setTimeout(() => {
+    dispatch(increment());
+  }, 1000);
+};
 
 // экспорт селектора состояния среза ГХ
 export const selectCount = (state) => state.counter.value;
