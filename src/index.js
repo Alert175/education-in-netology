@@ -9,13 +9,14 @@ import './index.css';
 // import AppLessonFive from './Lessons/Lesson5/App';
 // import AppLessonSix from './Lessons/Lesson6/App';
 // import AppLessonSeven from './Lessons/Lesson7/App';
-import AppLessonEight from './Lessons/Lesson8/App';
+// import AppLessonEight from './Lessons/Lesson8/App';
+import AppRouter from './Lessons/Lesson9/Task1/App'
 
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppLessonEight />
+    <AppRouter />
   </React.StrictMode>,
   document.getElementById('root')
 );
