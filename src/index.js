@@ -10,13 +10,13 @@ import './index.css';
 // import AppLessonSix from './Lessons/Lesson6/App';
 // import AppLessonSeven from './Lessons/Lesson7/App';
 // import AppLessonEight from './Lessons/Lesson8/App';
-import AppLessonTen from './Lessons/Lesson10/App';
+import AppCRUID from './Lessons/Lesson9/CRUID/App';
 
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppLessonTen />
+    <AppCRUID />
   </React.StrictMode>,
   document.getElementById('root')
 );
