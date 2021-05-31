@@ -17,11 +17,9 @@ const Create = () => {
       if (postText !== '') {
         setisPending(true);
         await axios.post('http://localhost:7777/posts', {
-          data: {
             id: 0,
             content: postText,
-          },
-        });
+          });
         setisPending(false);
         setpostText('');
         handlerRedirectToHome();

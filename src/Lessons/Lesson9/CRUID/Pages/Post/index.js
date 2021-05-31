@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams } from "react-router-dom"
+import { useParams, useHistory } from "react-router-dom"
 import axios from 'axios'
 import ReadCardPost from '../../Components/ReadCardPost';
 import WriteCardPost from '../../Components/WriteCardPost';
@@ -9,6 +9,7 @@ const Post = () => {
   const [post, setpost] = useState(null);
   const [isPending, setisPending] = useState(false);
   const [typeCard, setTypeCard] = useState('read')
+  const history = useHistory();
 
   // т.к. нет обработчика сервера который отдаст мне контент поста по его id, приходится писать такое
   const getPosts = async () => {
@@ -32,6 +33,23 @@ const Post = () => {
     }
   };
 
+  const handlerSavePost = async () => {
+    try {
+      await axios.post('http://localhost:7777/posts', { ...post });
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  const handlerDeletePost = async () => {
+    try {
+      await axios.delete(`http://localhost:7777/posts/${post.id}`);
+      history.push('/');
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   useEffect(() => {
     getPosts();
     return () => {
@@ -39,6 +57,7 @@ const Post = () => {
       setpost(null);
     };
   }, []);
+
   return <div>
     {
       isPending 
@@ -46,11 +65,13 @@ const Post = () => {
       : <div>
           {post !== null ? <div>
             {typeCard === 'read' && <ReadCardPost content={post.content}/>}
-            {typeCard === 'write' && <WriteCardPost content={post.content} changeContent={(value) => setpost({
+            {typeCard === 'write' && <WriteCardPost content={post.content} saveContent={handlerSavePost} changeContent={(value) => setpost({
               id: post.id,
               content: value
             })}/>}
           </div> : null}
+          <button onClick={() => setTypeCard('write')}>Изменить</button>
+          <button onClick={handlerDeletePost}>Удалить</button>
         </div>
     }
   </div>;
