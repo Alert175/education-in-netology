@@ -12,6 +12,21 @@ const initialState = {
       text: 'Цепь ГРМ',
       const: 15000,
     },
+    {
+      id: 2,
+      text: 'Цепь ГРМ',
+      const: 15000,
+    },
+    {
+      id: 3,
+      text: 'Цепь ГРМ',
+      const: 15000,
+    },
+    {
+      id: 4,
+      text: 'Цепь ГРМ',
+      const: 15000,
+    },
   ],
   status: 'add',
   activeTask: null,
