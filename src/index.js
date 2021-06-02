@@ -10,13 +10,13 @@ import './index.css';
 // import AppLessonSix from './Lessons/Lesson6/App';
 // import AppLessonSeven from './Lessons/Lesson7/App';
 // import AppLessonEight from './Lessons/Lesson8/App';
-import AppLessonTen from './Lessons/Lesson10/App';
+import AppLessonTenFirstTask from './Lessons/Lesson10_1/App';
 
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppLessonTen />
+    <AppLessonTenFirstTask />
   </React.StrictMode>,
   document.getElementById('root')
 );
