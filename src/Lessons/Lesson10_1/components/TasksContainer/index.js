@@ -8,13 +8,11 @@ import {
   setActiveTask,
   selectTasks,
   selectStatus,
-  selectActiveTask,
 } from './tasksSlice';
 
 const TasksContainer = () => {
   const tasks = useSelector(selectTasks);
   const status = useSelector(selectStatus);
-  const activeId = useSelector(selectActiveTask);
   const dispatch = useDispatch();
 
   const [text, settext] = useState('');
@@ -41,12 +39,20 @@ const TasksContainer = () => {
     dispatch(setActiveTask(id));
   };
 
+  const handlerClearState = () => {
+    settext('');
+    setcost('');
+    dispatch(setActiveTask(null));
+    dispatch(changeStatus('add'));
+  };
+
   return (
     <div className="container-tasks">
       <div className="active-task__container">
         <input value={text} onInput={(event) => settext(event.target.value)} />
         <input value={cost} onInput={(event) => setcost(event.target.value)} />
         <button onClick={handlerAddTask}>save</button>
+        <button onClick={handlerClearState}>cancel</button>
       </div>
       <ul>
         {tasks.map((element) => (
