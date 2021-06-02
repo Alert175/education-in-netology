@@ -43,6 +43,7 @@ const TasksContainer = () => {
   const handlerClearState = () => {
     settext('');
     setcost('');
+    setfilter('');
     dispatch(setActiveTask(null));
     dispatch(changeStatus('add'));
   };
